@@ -7,7 +7,8 @@
 import pandas as pd
 import nltk
 #nltk.download()
-import tkinter as tk
+from tkinter import *
+from tkinter.ttk import *
 from pandasai import SmartDatalake
 from pandasai.llm import AzureOpenAI
 import streamlit as st
