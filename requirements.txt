@@ -9,3 +9,4 @@ textblob==0.17.1
 matplotlib==3.8.0
 tk-tools==0.16.0
 matplotlib-inline==0.1.2
+pytk==0.0.2.1
