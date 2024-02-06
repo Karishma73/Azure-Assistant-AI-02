@@ -13,6 +13,7 @@ import streamlit as st
 import matplotlib
 from textblob import TextBlob
 matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 st.title("Project Nairobi powered by GenAl")
 # In[2]:
 llm = AzureOpenAI(
