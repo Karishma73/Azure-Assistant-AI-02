@@ -19,11 +19,11 @@ import matplotlib.pyplot as plt
 st.title("Project Nairobi powered by GenAl")
 # In[2]:
 llm = AzureOpenAI(
-    api_token="63efcdcc12ea499e85cc622b4c35a921",
-    api_base="https://datascience-dall-e-test.openai.azure.com/",
+    api_token="",
+    api_base="",
     #api_version="2023-05-15",
     api_version="2023-07-01-preview",
-    deployment_name="Test-for-Karishma"
+    deployment_name=""
 )
 
 #Data = pd.read_csv('v1_final_data.csv')
