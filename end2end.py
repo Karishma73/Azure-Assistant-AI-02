@@ -6,6 +6,8 @@
 
 import pandas as pd
 import nltk
+import os
+import env
 #nltk.download()
 #import tkinter as tk
 #from tkinter.ttk import *
@@ -17,20 +19,21 @@ from textblob import TextBlob
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 st.title("Project Nairobi powered by GenAl")
-# In[2]:
+os.environ["api_token"] = env.api_token
+os.environ["api_base"] = env.api_base
+os.environ["api_version"] = env.api_version
+os.environ["deployment_name"] = env.deployment_name
 llm = AzureOpenAI(
-    api_token="",
-    api_base="",
-    #api_version="2023-05-15",
-    api_version="2023-07-01-preview",
-    deployment_name=""
+    api_token=st.secrets["api_token"],
+    api_base=st.secrets["api_base"],
+    api_version=st.secrets["api_version"],
+    deployment_name=st.secrets["deployment_name"]
 )
 
 #Data = pd.read_csv('v1_final_data.csv')
 #st.title("Start your work....")
 user_input = st.file_uploader("Please upload your csv file here ", type=['csv'])
 if user_input is not None:
-    #Data = pd.read_csv(r"C:\Users\Karishma.Nanda\Documents\ofc_project\nairobi\v1_final_data.csv")
     Data = pd.read_csv(user_input)
     data = Data.copy(deep=True)
     data = data.dropna()
@@ -54,67 +57,7 @@ if user_input is not None:
             st.warning("Please enter your question.")
 
 
-# In[3]:
-
-
-
-
-# In[4]:
-
-
-
-
-
-# In[5]:
-
-
-#data.sort_values(by=['click_through_rate'], ascending=False)
-
-
-# In[6]:
-
-
-#df.chat("calculate the sum of open_rate and click_rate for subject fastfix flex documentatie ") #very good
-
-#df.chat('what is open_rate in month November')# very good
-# In[7]:
-
-
-#response = df.chat(
-   # "Plot the histogram of first five subject showing for each em_score_r, using different colors for each bar")
-#print(response)
-
-
-# In[8]:
-
-
-#data.info()
-
-
-# In[9]:
-
-
-#data["date"] = data["date"].apply(pd.to_datetime)
-
-
-# In[10]:
-
-
-st.title("Karishma is still working on it ...")
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
+st.title("We are still working on it ...")
 
 
 
